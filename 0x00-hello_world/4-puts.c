@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
- * This is the main where the program starts
+ * main - Entry point of the program
+ *
+ * This function prints a message to the console
  *
  * Return: Always 0
  */
