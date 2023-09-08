@@ -1,9 +1,8 @@
 #include <stdio.h>
-
 /**
  * main - Entry point for the program
  *
- * This function prints uses an integer inside putchar to print numbers from 0 to 9
+ * This function outputs int from 0 to 9
  *
  * Return: Always 0
  */
