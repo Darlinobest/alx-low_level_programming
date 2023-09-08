@@ -17,9 +17,6 @@ int main(void)
 		/* function to print to the console output*/
 		putchar(ch);
 
-		/* to print a new line after each iteration */
-		putchar('\n');
-
 		/* to increment after printing letter a */
 		ch++;
 	}
