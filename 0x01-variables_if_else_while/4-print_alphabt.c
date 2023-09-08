@@ -9,15 +9,15 @@
 int main(void)
 {
 	char ch = 'a';
+
 	while (ch <= 'z')
 	{
 		if (ch == 'q' || ch == 'e')
 		{
-			/* skip the letters by incrementing ch */
+		        /* skip the letters by incrementing ch */
 			ch++;
 			continue; 
 		}
-
 		/* print letters */
 		putchar(ch);
 		/* move to the next character */
