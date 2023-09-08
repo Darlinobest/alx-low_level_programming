@@ -14,13 +14,10 @@ int main(void)
 	{
 		if (ch == 'q' || ch == 'e')
 		{
-		        /* skip the letters by incrementing ch */
 			ch++;
 			continue; 
 		}
-		/* print letters */
 		putchar(ch);
-		/* move to the next character */
 		ch++;
 	}
 	putchar('\n');
