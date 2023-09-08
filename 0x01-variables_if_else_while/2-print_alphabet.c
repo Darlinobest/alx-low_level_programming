@@ -20,5 +20,7 @@ int main(void)
 		/* to increment after printing letter a */
 		ch++;
 	}
+	/* print a new line after displaying the output */
+	putchar('\n');
 	return (0);
 }
