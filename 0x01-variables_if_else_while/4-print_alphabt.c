@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 /**
  * main - Entry point for the program
  *
@@ -10,6 +9,7 @@
 int main(void)
 {
 	char ch = 'a';
+
        	while (ch <= 'z')
        	{
 	       	if (ch == 'q' || ch == 'e')
