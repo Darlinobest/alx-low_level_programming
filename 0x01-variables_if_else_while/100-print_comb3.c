@@ -1,10 +1,10 @@
 #include <stdio.h>
 /**
- * main - Entry point for the prgram
+ * main - Entry point of the program
  *
- * This function print all possible combition of 2 digits
+ * This program print all posible combination of 2 digits
  *
- * Return: Always 0.
+ * Return: Always 0
  */
 int main(void)
 {
@@ -19,7 +19,7 @@ int main(void)
 			if (digit1 == 8 && digit2 == 9)
 			{
 				continue;
-			}	
+			}
 			putchar(',');
 			putchar(' ');
 		}
