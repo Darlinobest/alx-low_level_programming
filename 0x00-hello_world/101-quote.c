@@ -1,17 +1,14 @@
-#include <unistd.h> /* Header for write function */
-
+#include <unistd.h>
 /**
  * main - Entry point of the program
  *
- * This program prints a specific message to the standard error stream.
+ * This program displays a message to the std error stream.
  *
  * Return: Always 1
  */
 int main(void)
 {
-    char *message="and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-
+    char *message = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
     write(2, message, 59);
-
     return (1);
 }
