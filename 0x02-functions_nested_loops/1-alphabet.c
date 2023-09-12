@@ -1,6 +1,9 @@
 #include "main.h"
 /**
- * main - prints alphabet to output in loerwcase
+ * print_alphabet - Entry point
+ *
+ * This function prints alphabet
+ *
  * Return: Always 0
  */
 void print_alphabet(void)
