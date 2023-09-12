@@ -6,6 +6,14 @@
  */
 int main(void)
 {
-	_islower('b');
+	int letter;
+	
+	letter = _islower('H');
+	_putchar(letter + '0');
+	letter = _islower('o');
+        _putchar(letter + '0');
+	letter = _islower(108);
+        _putchar(letter + '0');
+	_putchar('\n');
 	return (0);
 }
