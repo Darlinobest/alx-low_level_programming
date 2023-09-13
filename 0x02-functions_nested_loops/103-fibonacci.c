@@ -13,7 +13,7 @@ int main(void)
 	k = 2;
 	sum = 0;
 
-	for (x = 1; x<= 33; ++x)
+	for (x = 1; x <= 33; ++x)
 	{
 		if (y < 4000000 && (y % 2) == 0)
 		{
