@@ -10,9 +10,9 @@ void puts2(char *str)
 {
 	int x;
 
-	for (x = 0; str[x] != '\0'; x++)
+	for (x = 0; str[x] != '\0'; x+=2)
 	{
-		if (str[x] >= '0' && str[x] <= '8' && (str[x] % 2 == 0))
+		if (str[x] >= '0' && str[x] <= '8')
 		{
 			_putchar(str[x]);
 		}
