@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * cap_string - capitalizes first letter of a string
  * @ch: string to consider
@@ -13,11 +14,11 @@ char *cap_string(char *ch)
 
 	for (i = 0; ch[i] != '\0'; i++)
 	{
-		if (i == 0; ch[i] < 'a' && ch[i] < 'z')
+		if (i == 0 && ch[i] < 'a' && ch[i] < 'z')
 		{
 			ch[i] -= 32;
 		}
-		for (j = o; j < 13; j++)
+		for (j = 0; j < 13; j++)
 		{
 			if (ch[i] == token[j])
 			{
