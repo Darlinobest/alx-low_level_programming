@@ -9,8 +9,8 @@
 
 char *leet(char *ch)
 {
-	char *x = "aAeEoOtTlL";
-	char *y = "4433007711";
+	char x[] = "aAeEoOtTlL";
+	char y[] = "4433007711";
 	int i, j;
 
 	for (i = 0; ch[i] != '\0'; i++)
@@ -21,7 +21,7 @@ char *leet(char *ch)
 			{
 				ch[i] = y[j];
 			}
-		}	
+		}
 	}
 	return (ch);
 }
