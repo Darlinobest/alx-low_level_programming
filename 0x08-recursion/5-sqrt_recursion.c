@@ -1,7 +1,5 @@
 #include "main.h"
 
-int sqrt_calculator(int num, int i);
-
 /**
  * sqrt_calculator - function to perform logic for square root
  * @num: number to find its square root
@@ -9,6 +7,8 @@ int sqrt_calculator(int num, int i);
  *
  * Return: the square root of n, or -1 if n doesn't have a natural square root
  */
+
+int sqrt_calculator(int num, int i);
 
 /**
  * _sqrt_recursion - function to calc the square root of a number
@@ -20,6 +20,14 @@ int _sqrt_recursion(int n)
 {
 	return (sqrt_calculator(n, 1));
 }
+
+/**
+ * sqrt_calculator - function to perform logic for square root
+ * @num: number to find its square root
+ * @i: the current value for the square root
+ *
+ * Return: the square root of n, or -1 if n doesn't have a natural square root
+ */
 
 int sqrt_calculator(int num, int i)
 {
