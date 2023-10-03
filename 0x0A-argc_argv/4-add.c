@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
 
 /**
  * main - program to sum two integers
@@ -10,29 +11,20 @@
 
 int main(int argc, char *argv[])
 {
-	int i, num,  sum = 0;
+	int x, y, add = 0;
 
-	if (argc == 1)
+	for (x = 1; x < argc; x++)
 	{
-		printf("0\n");
-		return (0);
-	}
-	for (i = 1; i < argc; i++)
-	{
-		num = atoi(argv[i]);
-
-		if (num == 0 && argv[i][0] != '0')
+		for (y = 0; argv[x][y] != '\0'; y++)
 		{
-			printf("Error\n");
-			return (1);
+			if (!isdigit(argv[x][y]))
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
-		if (num < 0)
-		{
-			printf("Error\n");
-			return (1);
-		}
-		sum += num;
+		add = add + atoi(argv[x]);
 	}
-	printf("%d\n", sum);
+	printf("%d\n", add);
 	return (0);
 }
