@@ -7,42 +7,34 @@
  * @ac: argument count.
  * @av: argument vector.
  *
- * Return: pointer of an array of char
+ * Return: pointer to a new string or NULL on failure.
  */
-
 char *argstostr(int ac, char **av)
 {
-	int i, total_len = 0;
-	char *con_cat;
-	char *token;
+	char *result;
+	int i, j, len = 0, count = 0;
 
 	if (ac == 0 || av == NULL)
-	{
 		return (NULL);
-	}
 	for (i = 0; i < ac; i++)
 	{
-		total_len += strlen(av[i]) + 1;
+		len += strlen(av[i]) + 1;
 	}
-	con_cat = (char *)malloc(total_len * sizeof(char) + ac);
-	if (con_cat == NULL)
-	{
+	result = malloc(len * sizeof(char));
+	if (result == NULL)
 		return (NULL);
-	}
-	con_cat[0] = '\0';
 	for (i = 0; i < ac; i++)
 	{
-		token = strtok(av[i], " ");
-		while (token != NULL)
+		for (j = 0; av[i][j]; j++)
 		{
-			strcat(con_cat, token);
-			strcat(con_cat, " ");
-			token = strtok(NULL, " ");
+			result[count] = av[i][j];
+			count++;
 		}
 		if (i < ac - 1)
 		{
-			strcat(con_cat, "\n");
+			result[count] = '\n';
+			count++;
 		}
 	}
-	return (con_cat);
+	return (result);
 }
