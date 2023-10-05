@@ -10,21 +10,27 @@
 
 char *_strdup(char *str)
 {
-	size_t len;
+	size_t i, j;
 	char *copy;
 
-	len = strlen(str);
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-
-	copy = (char *)malloc((len + 1) * sizeof(char));
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	copy = (char *)malloc(sizeof(char) * (i + 1));
 
 	if (copy == NULL)
 	{
 		return (NULL);
 	}
-	strcpy(copy, str);
+	for (j = 0; j <= i; j++)
+	{
+		copy[j] = str[j];
+	}
 	return (copy);
 }
