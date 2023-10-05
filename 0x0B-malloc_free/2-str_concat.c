@@ -23,7 +23,7 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";
 	}
 
-	cat_string = (char *)malloc((total_len + 1) * sizeof(char));
+	cat_string = (char *)malloc((sizeof(char) * total_len + 1));
 
 	len1 = strlen(s1);
 	len2 = strlen(s2);
