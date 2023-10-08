@@ -12,17 +12,10 @@
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int len1;
+	unsigned int len1, i;
 	unsigned int len2;
+	unsigned int len;
 	char *cat_string;
-
-	len1 = strlen(s1);
-	len2 = strlen(s2);
-
-	if (n >= len2)
-	{
-		n = len2;
-	}
 
 	if (s1 == NULL)
 	{
@@ -33,16 +26,32 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = " ";
 	}
 
-	cat_string = (char *)malloc(len1 + n + 1);
+	for (len1 = 0; s1[len1] != '\0'; len1++)
+	{}
+	for (len2 = 0; s2[len2] != '\0'; len2++)
+	{}
+
+	if (n >= len2)
+        {
+                n = len2;
+        }
+	len = len1 + n;
+	cat_string = malloc(len + 1);
 
 	if (cat_string == NULL)
 	{
 		return (NULL);
 	}
-
-	strcpy(cat_string, s1);
-	strncpy(cat_string + len1, s2, n);
-	cat_string[len1 + n] = '\0';
+	for (i = 0; i < len; i++)
+	{
+		if(i < len1)
+			cat_string[i] = s1[i];
+		else
+		{
+			cat_string[i] = s2[i - len1];
+		}
+	}
+	cat_string[i] = '\0';
 
 	return (cat_string);
 
