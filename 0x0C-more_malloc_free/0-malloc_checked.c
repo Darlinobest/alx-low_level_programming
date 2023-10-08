@@ -10,13 +10,12 @@
 
 void *malloc_checked(unsigned int b)
 {
-	void *ptr;
+	char *ptr;
 
 	ptr = malloc(b);
 
 	if (ptr == NULL)
 	{
-		fprintf(stderr, "malloc failed to allocate Memory\n");
 		exit(98);
 	}
 	return (ptr);
