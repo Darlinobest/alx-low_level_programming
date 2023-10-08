@@ -33,7 +33,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = " ";
 	}
 
-	cat_string = (char *)malloc(len1 + n + 20);
+	cat_string = (char *)malloc(len1 + n + 2);
 
 	if (cat_string == NULL)
 	{
