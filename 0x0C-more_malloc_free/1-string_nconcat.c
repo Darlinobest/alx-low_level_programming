@@ -33,11 +33,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = " ";
 	}
 
-	cat_string = (char *)malloc(len1 + n + 2);
+	cat_string = (char *)malloc(len1 + n + 1);
 
 	if (cat_string == NULL)
 	{
-		exit(98);
+		return (NULL);
 	}
 
 	strcpy(cat_string, s1);
