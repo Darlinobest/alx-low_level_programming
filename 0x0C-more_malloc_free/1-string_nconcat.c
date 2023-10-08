@@ -36,7 +36,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	if (cat_string == NULL)
 	{
-		return (NULL);
+		exit(98);
 	}
 
 	strcpy(cat_string, s1);
