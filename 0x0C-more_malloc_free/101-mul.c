@@ -97,6 +97,8 @@ int main(int argc, char *argv[])
 	for (i = 0; i < total_len - 1; i++)
 	{
 		if (result[i] || i == total_len - len2)
+			a = 1;
+		if (a)
 			_putchar(result[i] + '0');
 	}
 	if (!a)
