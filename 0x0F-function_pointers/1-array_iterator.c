@@ -9,6 +9,7 @@
  * @action: pointer to the function
  * Return: Nothing
  */
+typedef void(*action)(int);
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
