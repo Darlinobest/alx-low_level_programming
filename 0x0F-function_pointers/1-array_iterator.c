@@ -2,10 +2,12 @@
 #include <stddef.h>
 
 /**
- * array_iterator - function to execute another func
- * @array: array to store the values
+ * array_iterator - function to execute another function
+ * given as a parameter
+ * @array: input to integer array
  * @size: size of the array
- * @action: point function
+ * @action: pointer to the function
+ * Return: Nothing
  */
 
 void array_iterator(int *array, size_t size, void (*action)(int))
