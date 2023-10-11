@@ -1,7 +1,6 @@
 #include "function_pointers.h"
 #include <stddef.h>
 
-typedef void(*action)(int);
 /**
  * array_iterator - function to execute another func
  * @array: array to store the values
