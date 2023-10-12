@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
 	for (x = 0; x < no_of_bytes; x++)
 	{
-		printf("%x02", opcode[x] & 0XFF);
+		printf("%x02", opcode[x] & 0xFF);
 		if (x != no_of_bytes - 1)
 			printf(" ");
 	}
