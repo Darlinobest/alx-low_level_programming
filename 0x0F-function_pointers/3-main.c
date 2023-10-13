@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	operation = get_op_func(argv[1]);
+	operation = get_op_func(argv[2]);
 	
 	if (operation == NULL)
 	{
