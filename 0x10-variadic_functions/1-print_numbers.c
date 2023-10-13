@@ -15,8 +15,8 @@ print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int i;
 	const char *number_separator;
 
-	number_separator = (separator != NULL) ? separator : ", ";
 	va_start(ap, n);
+	number_separator = (separator != NULL) ? separator : ", ";
 
 	for (i = 0; i < n; i++)
 	{
