@@ -4,7 +4,7 @@
 /**
  * print_all - A function that prints anything
  * given as argument
- * @format: a list of type of argumets pointed 
+ * @format: a list of type of argumets pointed
  * to a function which does not
  * change the address nor what it is pointing to
  */
