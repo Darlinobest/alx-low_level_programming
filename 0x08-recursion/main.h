@@ -12,5 +12,7 @@ int factorial(int n);
 int _pow_recursion(int x, int y);
 int _sqrt_recursion(int n);
 int find_square_root(int num, int guess);
+int is_prime_number(int n);
+int my_prime_number(int num, int guess);
 
 #endif
