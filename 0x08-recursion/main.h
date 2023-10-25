@@ -16,5 +16,6 @@ int is_prime_number(int n);
 int my_prime_number(int num, int guess);
 int is_palindrome(char *s);
 int check_palindrome(char *str, int start, int end);
+int wildcmp(char *s1, char *s2);
 
 #endif
