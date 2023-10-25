@@ -10,6 +10,7 @@ int check_palindrome(char *str, int start, int end);
 int is_palindrome(char *s)
 {
 	int len = strlen(s);
+
 	return (check_palindrome(s, 0, len - 1));
 }
 
@@ -23,7 +24,6 @@ int is_palindrome(char *s)
 
 int check_palindrome(char *str, int start, int end)
 {
-        /* Base case: */
 	if (start >= end)
 	{
 		return (1);
@@ -34,6 +34,6 @@ int check_palindrome(char *str, int start, int end)
 	}
 	else
 	{
-		return (check_palindrome(str, start + 1, end - 1 ));
-        }
+		return (check_palindrome(str, start + 1, end - 1));
+	}
 }
