@@ -14,5 +14,7 @@ int _sqrt_recursion(int n);
 int find_square_root(int num, int guess);
 int is_prime_number(int n);
 int my_prime_number(int num, int guess);
+int is_palindrome(char *s);
+int check_palindrome(char *str, int start, int end);
 
 #endif
