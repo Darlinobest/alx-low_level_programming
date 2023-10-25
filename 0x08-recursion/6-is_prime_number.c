@@ -15,7 +15,7 @@ int is_prime_number(int n)
 	return (my_prime_number(n, n - 1));
 }
 /**
- * my_prime_number - logic to find  prime 
+ * my_prime_number - logic to find  prime
  * @num: number to test if its prime or not
  * @guess: current guess for prime
  * Return: 1 if prime, 0 if not prime
