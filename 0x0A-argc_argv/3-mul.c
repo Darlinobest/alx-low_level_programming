@@ -12,17 +12,19 @@
 
 int main(int argc, char *argv[])
 {
-	int product;
+	int i, product;
 
-	product = atoi(argv[1]) * atoi(argv[2]);
+	product = 1;
 
 	if (argc != 3)
 	{
 		printf("%s\n", "Error");
+		return (1);
 	}
-	else
+	for (i = 1; i < argc; i++)
 	{
-		printf("%d\n", product);
+		product *= atoi(argv[i]);
 	}
+	printf("%d\n", product);
 	return (0);
 }
