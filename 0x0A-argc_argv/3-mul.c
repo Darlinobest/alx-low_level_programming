@@ -12,9 +12,9 @@
 
 int main(int argc, char *argv[])
 {
-	int i, product;
-	
-	product = 1;
+	int product;
+
+	product = atoi(argv[1]) * atoi(argv[2]);
 
 	if (argc != 3)
 	{
@@ -22,10 +22,6 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		for (i = 1; i < argc; i++)
-		{
-			product *= atoi(argv[i]);
-		}
 		printf("%d\n", product);
 	}
 	return (0);
