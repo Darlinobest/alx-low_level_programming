@@ -16,11 +16,11 @@ int main(int argc, char *argv[])
 	
 	product = 1;
 
-	if (argc == 1)
+	if (argc != 3)
 	{
 		printf("%s\n", "Error");
 	}
-	if (argc > 1)
+	else
 	{
 		for (i = 1; i < argc; i++)
 		{
