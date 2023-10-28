@@ -8,7 +8,7 @@
  *
  * @argv: array to stores arguments command line
  *
- * Return: Always 0
+ * Return: 0 upon success
  */
 
 int main(int argc, char *argv[])
