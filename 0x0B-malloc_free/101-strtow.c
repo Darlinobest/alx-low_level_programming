@@ -34,7 +34,7 @@ char **strtow(char *str)
 		{
 			if (k == 0)
 			{
-				result[j] = malloc(len * sizeof(char));
+				result[j] = malloc((len + 1) * sizeof(char));
 			}
 			result[j][k] = str[i];
 			k++;
