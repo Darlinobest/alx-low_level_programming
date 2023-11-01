@@ -28,6 +28,7 @@ char **strtow(char *str)
 				k = 0;
 				j++;
 				result = realloc(result, (j + 1) * sizeof(char *));
+				result[j] = malloc((len + 1) * sizeof(char));
 			}
 		}
 		else
