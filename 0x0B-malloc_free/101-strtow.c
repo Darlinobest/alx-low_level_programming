@@ -1,5 +1,32 @@
 #include "main.h"
 
+
+/**
+ * count_word - counts the number of words in a string
+ * @str: input string to be considered
+ * Return: word count upon sucess
+ */
+int count_word(char *str)
+{
+	int state_of_word;
+	int word_count = 0;
+
+	while (*str)
+	{
+		if (*str != ' ' && state_of_word == 0)
+		{
+			state_of_word = 1;
+			word_count++;
+		}
+		else if ((*str) == ' ')
+		{
+			state_of_word = 0;
+		}
+		str++;
+	}
+	return (word_count);
+}
+
 /**
  * strtow - Splits a string into words.
  * @str: The string to split.
@@ -9,44 +36,45 @@
 char **strtow(char *str)
 {
 	char **result;
-	int i, j, k, len;
+	char *tmp;
+	int i, j = 0, k = 0, len = 0, words, begin, stop;
 
-	j = 0, k = 0;
-	len = strlen(str);
-	if (str == NULL || strcmp(str, "") == 0)
-	{
+	while (*(str + len))
+		len++;
+
+	words = count_word(str);
+	
+	if (words == 0)
 		return (NULL);
-	}
-	result = malloc(sizeof(char *));
-	for (i = 0; i < len; i++)
+
+	result = (char **)malloc(sizeof(char *) * (words + 1));
+	
+	if (result == NULL)
+		return (NULL);
+
+	for (i = 0; i <= len; i++)
 	{
-		if (str[i] == ' ')
+		if (str[i] == ' ' || str[i] == '\0')
 		{
-			if (k > 0)
+			if (j)
 			{
-				result[j][k] = '\0';
-				k = 0;
-				j++;
-				result = realloc(result, (j + 1) * sizeof(char *));
-				result[j] = malloc((len + 1) * sizeof(char));
+				stop = i;
+				tmp = (char *)malloc(sizeof(char) * (j + 1));
+				if (tmp == NULL)
+					return (NULL);
+				while (begin < stop)
+				{
+					*tmp++ = str[begin++];
+				}
+				*tmp = '\0';
+				result[k] = tmp - j;
+				k++;
+				j = 0;
 			}
 		}
-		else
-		{
-			if (k == 0)
-			{
-				result[j] = malloc((len + 1) * sizeof(char));
-			}
-			result[j][k] = str[i];
-			k++;
-		}
+		else if (j++ == 0)
+			begin = i;
 	}
-	if (k > 0)
-	{
-		result[j][k] = '\0';
-		j++;
-		result = realloc(result, (j + 1) * sizeof(char *));
-	}
-	result[j] = NULL;
+	result[k] = NULL;
 	return (result);
 }
