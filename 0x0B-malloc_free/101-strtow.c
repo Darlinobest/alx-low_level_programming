@@ -41,17 +41,12 @@ char **strtow(char *str)
 
 	while (*(str + len))
 		len++;
-
 	words = count_word(str);
-	
 	if (words == 0)
 		return (NULL);
-
 	result = (char **)malloc(sizeof(char *) * (words + 1));
-	
 	if (result == NULL)
 		return (NULL);
-
 	for (i = 0; i <= len; i++)
 	{
 		if (str[i] == ' ' || str[i] == '\0')
