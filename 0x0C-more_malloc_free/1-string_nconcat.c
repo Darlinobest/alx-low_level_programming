@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * string_nconcat - function to concat two strings
+ * @s1: string one to be considered
+ * @s2: string two to be cosnidered
+ * @n: number of bytes
+ * Return: pointed to memory, concated string
+ */
+
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *ptr;
