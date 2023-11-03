@@ -50,7 +50,7 @@ int strlen_recursion(char *str)
 int main(int argc, char *argv[])
 {
 	int *result;
-	int i, num1, carry, num2, len1, len2, tot_len, len, flag = 0;
+	int i, num1, carry, num2, len1, len2, tot_len, flag = 0;
 	char *ptr_s1, *ptr_s2;
 
 	ptr_s1 = argv[1], ptr_s2 = argv[2];
@@ -58,11 +58,10 @@ int main(int argc, char *argv[])
 		error();
 	len1 = strlen_recursion(ptr_s1), len2 = strlen_recursion(ptr_s2);
 	tot_len = len1 + len2 + 1;
-	len = len1 + len2;
 	result = malloc(sizeof(int) * tot_len);
 	if (!result)
 		return (1);
-	for (i = 0; i <= len; i++)
+	for (i = 0; i <= len1 + len2; i++)
 		result[i] = 0;
 	for (len1 = len1 - 1; len1 >= 0; len1--)
 	{
