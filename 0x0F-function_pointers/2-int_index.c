@@ -8,7 +8,7 @@
  * compare values
  * Return: -1 is size is <= 0 or no elemet found
  * or returns the index of the first element used
- * to compare
+ * to compare with
  */
 
 int int_index(int *array, int size, int (*cmp)(int))
