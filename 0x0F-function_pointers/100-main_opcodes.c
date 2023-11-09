@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 	i = 0;
 	while (i < num_of_bytes)
 	{
-		printf("%02x", (unsigned char)opcode[i]);
+		printf("%02x", opcode[i] & 0xFF);
 		if (1 < (num_of_bytes - 1))
 			printf(" ");
 		i++;
