@@ -1,21 +1,18 @@
 #include "variadic_functions.h"
 
 /**
- * print_all - prints anything.
- * @format: a list of types of arguments
- * passed to the function.
- *
+ * print_formatted_args - formats and prints args.
+ * @format: format string indicating the types
+ * of arguments passed to the function.
+ * @args: list of variable argument
  * Return: no return.
  */
-void print_all(const char * const format, ...)
+void print_formatted_args(const char *format, va_list args)
 {
-	va_list args;
-	unsigned int i, j, x;
+	unsigned int i = 0, j, x = 0;
 	char *str;
-	const char total_arg[] = "cifs";
+	const char total_arg[] = "cfis";
 
-	i = 0, x = 0;
-	va_start(args, format);
 	while (format && format[i])
 	{
 		j = 0;
@@ -25,7 +22,8 @@ void print_all(const char * const format, ...)
 			{
 				printf(", ");
 				break;
-			} j++;
+			}
+			 j++;
 		}
 		switch (format[i])
 		{
@@ -41,13 +39,26 @@ void print_all(const char * const format, ...)
 		case 's':
 			str = va_arg(args, char *), x = 1;
 			if (!str)
-			{
 				printf("(nil)");
-				break;
-			}
 			printf("%s", str);
 			break;
 		} i++;
 	}
-	printf("\n"), va_end(args);
+}
+/**
+ * print_all - print all formatted args
+ * @format: format string specifying
+ * the type of arguments
+ * @...: multiple variable argument
+ */
+
+void print_all(const char * const format, ...)
+{
+	va_list args;
+
+	va_start(args, format);
+	print_formatted_args(format, args);
+
+	printf("\n");
+	va_end(args);
 }
