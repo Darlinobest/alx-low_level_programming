@@ -1,5 +1,23 @@
 #include "variadic_functions.h"
 
+
+/**
+ * print_all - print all formatted args
+ * @format: format string specifying
+ * the type of arguments
+ */
+
+void print_all(const char * const format, ...)
+{
+	va_list args;
+
+	va_start(args, format);
+	print_formatted_args(format, args);
+
+	printf("\n");
+	va_end(args);
+}
+
 /**
  * print_formatted_args - formats and prints args.
  * @format: format string indicating the types
@@ -44,21 +62,4 @@ void print_formatted_args(const char *format, va_list args)
 			break;
 		} i++;
 	}
-}
-/**
- * print_all - print all formatted args
- * @format: format string specifying
- * the type of arguments
- * @...: multiple variable argument
- */
-
-void print_all(const char * const format, ...)
-{
-	va_list args;
-
-	va_start(args, format);
-	print_formatted_args(format, args);
-
-	printf("\n");
-	va_end(args);
 }
