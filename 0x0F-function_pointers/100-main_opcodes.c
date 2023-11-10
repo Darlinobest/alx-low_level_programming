@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	while (i < num_of_bytes)
 	{
 		printf("%02x", opcode[i] & 0xFF);
-		if (1 < (num_of_bytes - 1))
+		if (i < (num_of_bytes - 1))
 			printf(" ");
 		i++;
 	}
