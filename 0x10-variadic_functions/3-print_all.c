@@ -1,5 +1,6 @@
 #include "variadic_functions.h"
 
+void print_formatted_args(const char *format, va_list args);
 
 /**
  * print_all - print all formatted args
