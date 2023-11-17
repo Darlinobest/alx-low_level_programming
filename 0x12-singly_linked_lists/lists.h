@@ -4,6 +4,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * struct listsis - singly linked list
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ * ALX project
+ */
+
 typedef struct listss
 {
 	char *str;
