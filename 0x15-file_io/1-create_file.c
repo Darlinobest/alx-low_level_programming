@@ -16,10 +16,12 @@ int create_file(const char *filename, char *text_content)
 	mode_t permission;
 
 	permission = S_IRUSR | S_IWUSR;
-	text_size = strlen(text_content);
-
-	file_descriptor = open(filename, O_CREAT | O_WRONLY | O_TRUNC, permission);
-
+	if (text_content == NULL)
+		file_descriptor = open(filename, O_CREAT | O_WRONLY | O_TRUNC, permission);
+	else
+	{
+		text_size = strlen(text_content);
+	}
 	if (file_descriptor == -1)
 		return (-1);
 	if (text_content != NULL)
