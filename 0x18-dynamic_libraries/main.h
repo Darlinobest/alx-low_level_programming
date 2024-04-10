@@ -1,7 +1,5 @@
-#ifdef _MAIN_H
-#define _MAIN_H
-
-#define EXIT_SUCCESS
+#ifdef MAIN_H
+#define MAIN_H
 
 int _putchar(char c);
 int _islower(int c);
